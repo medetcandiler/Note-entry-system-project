@@ -18,7 +18,7 @@ New version of the project:
 
 ![new-version](https://github.com/medetcandiler/Note-entry-system-project/blob/main/new-version-of-the-project.gif)
 
-Old version if the project:
+Old version of the project:
 
 ![old-version](https://github.com/medetcandiler/Note-entry-system-project/blob/main/note-calculation-system.gif)
 
