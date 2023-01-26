@@ -12,6 +12,7 @@ let form2=document.querySelector('#form2')
 let midDOM=document.querySelector('#mid-note')
 let finalDOM=document.querySelector('#final-note')
 let infoDOM=document.querySelector('#info')
+let errorDOM=document.querySelector('#error')
 
 midDOM.addEventListener('change', ()=>{
     midDOM.setAttribute('value', midDOM.value)
@@ -41,7 +42,7 @@ function handleChange(e){
 function submitFnc(e){
     e.preventDefault()
     average=Math.round(midNote*0.3 + finalNote*0.7);
-    infoDOM.classList.add('text-success');
+    infoDOM.classList.add('success');
     myDataArr.push(average)
     localStorage.setItem('items2', JSON.stringify(myDataArr))
     if (average >= 0 && average <= 100 && average!=''){
@@ -82,12 +83,15 @@ function submitFnc(e){
                 break;
             case(average<50):{
                 infoDOM.innerHTML=`${SAD} FF Average note: ${average}`
-                infoDOM.classList.replace('text-success','text-danger')
+                infoDOM.classList.replace('success','danger')
             }
                 break;
         }
     }else{
-        alert('Please enter the notes information as a number between 0 and 100');
+        errorDOM.innerHTML=`
+        <h3 style="color: red;">Please enter the notes information as a number between 0 and 100</h3>
+        `;
+        setTimeout( () => errorDOM.innerHTML='', 1400 )
     }
 }
 

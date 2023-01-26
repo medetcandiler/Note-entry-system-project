@@ -1,14 +1,28 @@
+:root{
+    --success: green;
+    --danger: red;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+.success{
+    color: var(--success);
+}
+.danger{
+    color: var(--danger);
+}
+#info{
+    font-size: 2rem;
+}
 body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    margin-top: 14rem;
 }
 .container{
     position: relative;
@@ -63,4 +77,10 @@ button:hover{
 button:active{
     background-color: grey;
     color: #ffffff;
+}
+.text-container{
+    width: 80%;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
